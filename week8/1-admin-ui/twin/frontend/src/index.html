@@ -37,12 +37,31 @@
             background: #2c3e50;
             color: white;
             padding: 20px;
-            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .header-text {
+            flex: 1;
         }
 
         .chat-header h1 {
             font-size: 24px;
             font-weight: 600;
+            margin: 0;
         }
 
         .chat-header p {
@@ -202,8 +221,14 @@
 <body>
     <div class="chat-container">
         <div class="chat-header">
-            <h1 id="chat-title">Chat with Digital Twin</h1>
-            <p>Ask me anything about my professional background and experience</p>
+            <div class="header-content">
+                <img src="https://twin-frontendfrontendbucket428b8c09-l9ak83itroov.s3.us-west-2.amazonaws.com/avatar.png"
+                    alt="Digital Twin Avatar" class="avatar" />
+                <div class="header-text">
+                    <h1 id="chat-title">Chat with Digital Twin</h1>
+                    <p>Ask me anything about my professional background and experience</p>
+                </div>
+            </div>
         </div>
         <div class="chat-messages" id="chat-messages">
             <div class="typing-indicator" id="typing-indicator">
